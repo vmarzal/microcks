@@ -1,0 +1,12 @@
+apiVersion: microcks.io/v1alpha1
+kind: APISource
+metadata:
+  name: tests-artifacts
+  annotations:
+    microcks.io/instance: microcks
+spec:
+  artifacts:
+    - url: https://setools.t-systems.es/gitlab/health/genomica/commons/infra/microcks/-/raw/main/samples/hci_openapi_complete.yaml?ref_type=heads
+      mainArtifact: true
+    - url: https://setools.t-systems.es/gitlab/health/genomica/commons/infra/microcks/-/raw/main/samples/leire.soapui.xml?ref_type=heads
+      mainArtifact: true

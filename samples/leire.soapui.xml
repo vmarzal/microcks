@@ -1,0 +1,1199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="6ed2097e-7513-4589-a7a1-1ea3a0f97c2d" activeEnvironment="Default" name="pacientes" resourceRoot="" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="a951be62-f86d-42d9-8695-c116f0f05098" wsaVersion="NONE" name="BasicHttpBinding_IPacientes" type="wsdl" bindingName="{http://sanidad.navarra.es/LEIRE/IC/Pacientes/}BasicHttpBinding_IPacientes" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/A58558047/Downloads/_dev/pacientes.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\Users\A58558047\Downloads\_dev\pacientes.wsdl"><con:part><con:url>file:\C:\Users\A58558047\Downloads\_dev\pacientes.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="Pacientes" targetNamespace="http://sanidad.navarra.es/LEIRE/IC/Pacientes/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://sanidad.navarra.es/LEIRE/IC/Pacientes/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://sanidad.navarra.es/LEIRE/IC/Pacientes/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://sanidad.navarra.es/LEIRE/IC/"/>
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Resultados"/>
+      <xs:element name="RecuperarHistoria">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="filtro" nillable="true" type="q1:FiltroRecuperarHistoriaDTO" xmlns:q1="http://sanidad.navarra.es/LEIRE/IC/"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecuperarHistoriaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecuperarHistoriaResult" nillable="true" type="q2:ResultadoRecuperarHistoria" xmlns:q2="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Resultados"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BuscarHistorias">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="filtro" nillable="true" type="q3:FiltroBuscarHistoriasDTO" xmlns:q3="http://sanidad.navarra.es/LEIRE/IC/"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BuscarHistoriasResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="BuscarHistoriasResult" nillable="true" type="q4:ResultadoBuscarHistorias" xmlns:q4="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Resultados"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecuperarDatosNotificacionPaciente">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="filtro" nillable="true" type="q5:FiltroBuscarDatosNotificacionesDTO" xmlns:q5="http://sanidad.navarra.es/LEIRE/IC/"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecuperarDatosNotificacionPacienteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecuperarDatosNotificacionPacienteResult" nillable="true" type="q6:ResultadoRecuperarNotificacion" xmlns:q6="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Resultados"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecuperarNumeroHistoriaCipna">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="filtro" nillable="true" type="q7:FiltroRecuperarHistoriaDTO" xmlns:q7="http://sanidad.navarra.es/LEIRE/IC/"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecuperarNumeroHistoriaCipnaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecuperarNumeroHistoriaCipnaResult" nillable="true" type="q8:ResultadoHistoriaCipna" xmlns:q8="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Resultados"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecuperarEventosRNHC">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="filtro" nillable="true" type="q9:FiltroRecuperarEventosRNHCDTO" xmlns:q9="http://sanidad.navarra.es/LEIRE/IC/"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecuperarEventosRNHCResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecuperarEventosRNHCResult" nillable="true" type="q10:ResultadoRecuperarEventosRNHC" xmlns:q10="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Resultados"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GenerarEtiquetasPacientesIngresos">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="filtro" nillable="true" type="q11:FiltroEtiquetasPacientesIngresosDTO" xmlns:q11="http://sanidad.navarra.es/LEIRE/IC/"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GenerarEtiquetasPacientesIngresosResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GenerarEtiquetasPacientesIngresosResult" nillable="true" type="q12:ResultadoGenerarEtiquetasPacientesIngresos" xmlns:q12="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Resultados"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecuperarPacientesFallecidos">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="filtro" nillable="true" type="q13:FiltroRecuperarPacientesFallecidosDTO" xmlns:q13="http://sanidad.navarra.es/LEIRE/IC/"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecuperarPacientesFallecidosResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecuperarPacientesFallecidosResult" nillable="true" type="q14:ResultadoRecuperarPacientesFallecidos" xmlns:q14="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Resultados"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecuperarHistoriaSinPaciente">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="filtro" nillable="true" type="q15:FiltroRecuperarHistoriaSinPacienteDTO" xmlns:q15="http://sanidad.navarra.es/LEIRE/IC/"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecuperarHistoriaSinPacienteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RecuperarHistoriaSinPacienteResult" nillable="true" type="q16:ResultadoRecuperarHistoriaSinPaciente" xmlns:q16="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Resultados"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BuscarHistoriasSinPaciente">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="filtro" nillable="true" type="q17:FiltroBuscarHistoriasSinPacienteDTO" xmlns:q17="http://sanidad.navarra.es/LEIRE/IC/"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BuscarHistoriasSinPacienteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="BuscarHistoriasSinPacienteResult" nillable="true" type="q18:ResultadoBuscarHistoriasSinPaciente" xmlns:q18="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Resultados"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+      <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+      <xs:element name="byte" nillable="true" type="xs:byte"/>
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+      <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+      <xs:element name="double" nillable="true" type="xs:double"/>
+      <xs:element name="float" nillable="true" type="xs:float"/>
+      <xs:element name="int" nillable="true" type="xs:int"/>
+      <xs:element name="long" nillable="true" type="xs:long"/>
+      <xs:element name="QName" nillable="true" type="xs:QName"/>
+      <xs:element name="short" nillable="true" type="xs:short"/>
+      <xs:element name="string" nillable="true" type="xs:string"/>
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+      <xs:element name="char" nillable="true" type="tns:char"/>
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int"/>
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration"/>
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid"/>
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName"/>
+      <xs:attribute name="Id" type="xs:ID"/>
+      <xs:attribute name="Ref" type="xs:IDREF"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://sanidad.navarra.es/LEIRE/IC/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://sanidad.navarra.es/LEIRE/IC/">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO"/>
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xs:import namespace="http://sanidad.navarra.es/LEIRE/"/>
+      <xs:complexType name="FiltroRecuperarHistoriaDTO">
+        <xs:complexContent mixed="false">
+          <xs:extension base="q1:ICBaseDTO" xmlns:q1="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CIPNA" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="NumeroHistoria" nillable="true" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="FiltroRecuperarHistoriaDTO" nillable="true" type="tns:FiltroRecuperarHistoriaDTO"/>
+      <xs:complexType name="FiltroBuscarHistoriasDTO">
+        <xs:complexContent mixed="false">
+          <xs:extension base="q2:ICBaseDTO" xmlns:q2="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Apellido1" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="Apellido2" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="Cipna" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="FechaNacimiento" nillable="true" type="xs:dateTime"/>
+              <xs:element minOccurs="0" name="Nif" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="NumHistoria" nillable="true" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="FiltroBuscarHistoriasDTO" nillable="true" type="tns:FiltroBuscarHistoriasDTO"/>
+      <xs:complexType name="FiltroBuscarDatosNotificacionesDTO">
+        <xs:complexContent mixed="false">
+          <xs:extension base="q3:ICBaseDTO" xmlns:q3="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Cipna" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="NumHistoria" nillable="true" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="FiltroBuscarDatosNotificacionesDTO" nillable="true" type="tns:FiltroBuscarDatosNotificacionesDTO"/>
+      <xs:complexType name="FiltroRecuperarEventosRNHCDTO">
+        <xs:complexContent mixed="false">
+          <xs:extension base="q4:ICBaseDTO" xmlns:q4="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IdEvento" type="xs:int"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="FiltroRecuperarEventosRNHCDTO" nillable="true" type="tns:FiltroRecuperarEventosRNHCDTO"/>
+      <xs:complexType name="FiltroEtiquetasPacientesIngresosDTO">
+        <xs:complexContent mixed="false">
+          <xs:extension base="q5:ICBaseDTO" xmlns:q5="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CodigoComplejo" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="Historias" nillable="true" type="q6:ArrayOfstring" xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+              <xs:element minOccurs="0" name="TipoEtiquetaListaPacientes" type="q7:eTipoEtiquetaListaPacientes" xmlns:q7="http://sanidad.navarra.es/LEIRE/"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="FiltroEtiquetasPacientesIngresosDTO" nillable="true" type="tns:FiltroEtiquetasPacientesIngresosDTO"/>
+      <xs:complexType name="FiltroRecuperarPacientesFallecidosDTO">
+        <xs:complexContent mixed="false">
+          <xs:extension base="q8:ICBaseDTO" xmlns:q8="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="FechaFallecDesde" type="xs:dateTime"/>
+              <xs:element minOccurs="0" name="FechaFallecHasta" type="xs:dateTime"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="FiltroRecuperarPacientesFallecidosDTO" nillable="true" type="tns:FiltroRecuperarPacientesFallecidosDTO"/>
+      <xs:complexType name="FiltroRecuperarHistoriaSinPacienteDTO">
+        <xs:complexContent mixed="false">
+          <xs:extension base="q9:ICBaseDTO" xmlns:q9="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NHC" nillable="true" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="FiltroRecuperarHistoriaSinPacienteDTO" nillable="true" type="tns:FiltroRecuperarHistoriaSinPacienteDTO"/>
+      <xs:complexType name="FiltroBuscarHistoriasSinPacienteDTO">
+        <xs:complexContent mixed="false">
+          <xs:extension base="q10:ICBaseDTO" xmlns:q10="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IdTipoPaciente" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="NHC" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="ObtenerInactivos" type="xs:boolean"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="FiltroBuscarHistoriasSinPacienteDTO" nillable="true" type="tns:FiltroBuscarHistoriasSinPacienteDTO"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO">
+      <xs:complexType name="ICBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoPrograma" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ICBaseDTO" nillable="true" type="tns:ICBaseDTO"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Resultados" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Resultados">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Pacientes"/>
+      <xs:complexType name="ResultadoRecuperarHistoria">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:ResultadoICBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Historia" nillable="true" type="q1:DatosHistoria" xmlns:q1="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Pacientes"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ResultadoRecuperarHistoria" nillable="true" type="tns:ResultadoRecuperarHistoria"/>
+      <xs:complexType name="ResultadoICBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EsCorrecto" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="MensajeError" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ResultadoICBase" nillable="true" type="tns:ResultadoICBase"/>
+      <xs:complexType name="ResultadoBuscarHistorias">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:ResultadoICBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="BusquedaCompleta" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="Historias" nillable="true" type="q2:ArrayOfDatosHistoriaBase" xmlns:q2="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Pacientes"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ResultadoBuscarHistorias" nillable="true" type="tns:ResultadoBuscarHistorias"/>
+      <xs:complexType name="ResultadoRecuperarNotificacion">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:ResultadoICBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="datosNotificacion" nillable="true" type="q3:DatosNotificacion" xmlns:q3="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Pacientes"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ResultadoRecuperarNotificacion" nillable="true" type="tns:ResultadoRecuperarNotificacion"/>
+      <xs:complexType name="ResultadoHistoriaCipna">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:ResultadoICBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="datosNumeroHistoriaCipna" nillable="true" type="q4:DatosNumeroHistoriaCipna" xmlns:q4="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Pacientes"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ResultadoHistoriaCipna" nillable="true" type="tns:ResultadoHistoriaCipna"/>
+      <xs:complexType name="ResultadoRecuperarEventosRNHC">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:ResultadoICBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Eventos" nillable="true" type="q5:ArrayOfEventoRNHC" xmlns:q5="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Pacientes"/>
+              <xs:element minOccurs="0" name="ExistenMasRegistros" type="xs:boolean"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ResultadoRecuperarEventosRNHC" nillable="true" type="tns:ResultadoRecuperarEventosRNHC"/>
+      <xs:complexType name="ResultadoGenerarEtiquetasPacientesIngresos">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:ResultadoICBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="FicheroGenerado" nillable="true" type="xs:base64Binary"/>
+              <xs:element minOccurs="0" name="NombreFichero" nillable="true" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ResultadoGenerarEtiquetasPacientesIngresos" nillable="true" type="tns:ResultadoGenerarEtiquetasPacientesIngresos"/>
+      <xs:complexType name="ResultadoRecuperarPacientesFallecidos">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:ResultadoICBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="PacientesFallecidos" nillable="true" type="q6:ArrayOfPacienteFallecido" xmlns:q6="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Pacientes"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ResultadoRecuperarPacientesFallecidos" nillable="true" type="tns:ResultadoRecuperarPacientesFallecidos"/>
+      <xs:complexType name="ResultadoRecuperarHistoriaSinPaciente">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:ResultadoICBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="HistoriaSinPaciente" nillable="true" type="q7:DatosHistoriaSinPaciente" xmlns:q7="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Pacientes"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ResultadoRecuperarHistoriaSinPaciente" nillable="true" type="tns:ResultadoRecuperarHistoriaSinPaciente"/>
+      <xs:complexType name="ResultadoBuscarHistoriasSinPaciente">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:ResultadoICBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="HistoriasSinPaciente" nillable="true" type="q8:ArrayOfDatosHistoriaSinPaciente" xmlns:q8="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Pacientes"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ResultadoBuscarHistoriasSinPaciente" nillable="true" type="tns:ResultadoBuscarHistoriasSinPaciente"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Pacientes" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Pacientes">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General"/>
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades"/>
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Maestros"/>
+      <xs:complexType name="DatosHistoria">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:DatosHistoriaBase">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Autonomia" nillable="true" type="q1:Autonomia" xmlns:q1="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General"/>
+              <xs:element minOccurs="0" name="CodPostal" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="CustodiaCompartida" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="DatosCopago" nillable="true" type="tns:DatosCoPago"/>
+              <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="EmpresaGrupoAsistencial" nillable="true" type="tns:Empresa"/>
+              <xs:element minOccurs="0" name="EsDuplicado" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="EsFallecido" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="FechaFallecimiento" type="xs:dateTime"/>
+              <xs:element minOccurs="0" name="GestionCambios" nillable="true" type="q2:GestionDeCambio" xmlns:q2="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General"/>
+              <xs:element minOccurs="0" name="GrupoAsistencial" nillable="true" type="tns:GrupoAsistencial"/>
+              <xs:element minOccurs="0" name="HistoriaConPaciente" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="Idioma" type="q3:eIdioma" xmlns:q3="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades"/>
+              <xs:element minOccurs="0" name="LocalidadResidencia" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="MedicoCabecera" nillable="true" type="q4:Medico" xmlns:q4="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General"/>
+              <xs:element minOccurs="0" name="NotificacionCarta" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="NotificacionEmail" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="NotificacionSMS" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="NumHistoriaAntiguo" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="NumHistoriaCorrecto" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="PaisNacimiento" nillable="true" type="q5:Pais" xmlns:q5="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General"/>
+              <xs:element minOccurs="0" name="PaisResidencia" nillable="true" type="q6:Pais" xmlns:q6="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General"/>
+              <xs:element minOccurs="0" name="Pasaporte" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="ProvinciaResidencia" nillable="true" type="q7:Provincia" xmlns:q7="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General"/>
+              <xs:element minOccurs="0" name="RestriccionPaciente" type="q8:eTipoRestriccionLeire" xmlns:q8="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades"/>
+              <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="Telefono2" nillable="true" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="DatosHistoria" nillable="true" type="tns:DatosHistoria"/>
+      <xs:complexType name="DatosHistoriaBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Apellido1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Apellido2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Cipna" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FechaNacimiento" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="Nif" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NombreUso" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NumHistoria" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NumSeguridadSocial" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Sexo" type="q9:eSexo" xmlns:q9="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades"/>
+          <xs:element minOccurs="0" name="SexoBiologico" type="q10:eSexo" xmlns:q10="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades"/>
+          <xs:element minOccurs="0" name="SexoSentido" type="q11:eSexo" xmlns:q11="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades"/>
+          <xs:element minOccurs="0" name="Situacion" type="q12:eSituacionPaciente" xmlns:q12="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DatosHistoriaBase" nillable="true" type="tns:DatosHistoriaBase"/>
+      <xs:complexType name="DatosCoPago">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GrupoFarmacia" nillable="true" type="tns:GrupoFarmacia"/>
+          <xs:element minOccurs="0" name="SubgrupoFarmacia" nillable="true" type="tns:SubgrupoFarmacia"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DatosCoPago" nillable="true" type="tns:DatosCoPago"/>
+      <xs:complexType name="GrupoFarmacia">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GrupoFarmacia" nillable="true" type="tns:GrupoFarmacia"/>
+      <xs:complexType name="SubgrupoFarmacia">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SubgrupoFarmacia" nillable="true" type="tns:SubgrupoFarmacia"/>
+      <xs:complexType name="Empresa">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Empresa" nillable="true" type="tns:Empresa"/>
+      <xs:complexType name="GrupoAsistencial">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CodigoCIASDefecto" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="RestriccionesEmpresa" nillable="true" type="tns:ArrayOfRestriccionEmpresa"/>
+          <xs:element minOccurs="0" name="TipoUsuarioDefecto" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TiposNoPermitidos" nillable="true" type="q13:ArrayOfstring" xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+          <xs:element minOccurs="0" name="Visible" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GrupoAsistencial" nillable="true" type="tns:GrupoAsistencial"/>
+      <xs:complexType name="ArrayOfRestriccionEmpresa">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="RestriccionEmpresa" nillable="true" type="tns:RestriccionEmpresa"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfRestriccionEmpresa" nillable="true" type="tns:ArrayOfRestriccionEmpresa"/>
+      <xs:complexType name="RestriccionEmpresa">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodigoEmpresa" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CodigoTipoUsuario" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="RestriccionEmpresa" nillable="true" type="tns:RestriccionEmpresa"/>
+      <xs:complexType name="ArrayOfDatosHistoriaBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="DatosHistoriaBase" nillable="true" type="tns:DatosHistoriaBase"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfDatosHistoriaBase" nillable="true" type="tns:ArrayOfDatosHistoriaBase"/>
+      <xs:complexType name="DatosNotificacion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActivaAlternativa" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CodigoPais" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CodigoPaisAlternativa" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CodigoPostal" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CodigoPostal2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CodigoPostalAlternativa" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CodigoProvincia" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CodigoProvinciaAlternativa" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DireccionAlternativa" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="Localidad" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LocalidadAlternativa" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NombrePais" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NombrePaisAlternativa" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NombreProvincia" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NombreProvinciaAlternativa" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ObservacionesAlternativa" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Telefono1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Telefono2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TelefonoAlternativa" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DatosNotificacion" nillable="true" type="tns:DatosNotificacion"/>
+      <xs:complexType name="DatosNumeroHistoriaCipna">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Cipna" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NumeroHistoria" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DatosNumeroHistoriaCipna" nillable="true" type="tns:DatosNumeroHistoriaCipna"/>
+      <xs:complexType name="ArrayOfEventoRNHC">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="EventoRNHC" nillable="true" type="tns:EventoRNHC"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfEventoRNHC" nillable="true" type="tns:ArrayOfEventoRNHC"/>
+      <xs:complexType name="EventoRNHC">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Evento" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Fechoper" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="IdEvento" type="xs:int"/>
+          <xs:element minOccurs="0" name="TipoEvento" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="EventoRNHC" nillable="true" type="tns:EventoRNHC"/>
+      <xs:complexType name="ArrayOfPacienteFallecido">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="PacienteFallecido" nillable="true" type="tns:PacienteFallecido"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfPacienteFallecido" nillable="true" type="tns:ArrayOfPacienteFallecido"/>
+      <xs:complexType name="PacienteFallecido">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Apellido1" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Apellido2" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Cipna" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FechaFallecimiento" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="FechaNacimiento" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="Nif" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NombreUso" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NumHistoria" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NumSeguridadSocial" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Sexo" type="q14:eSexo" xmlns:q14="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades"/>
+          <xs:element minOccurs="0" name="SexoBiologico" type="q15:eSexo" xmlns:q15="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades"/>
+          <xs:element minOccurs="0" name="SexoSentido" type="q16:eSexo" xmlns:q16="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades"/>
+          <xs:element minOccurs="0" name="Situacion" type="q17:eSituacionPaciente" xmlns:q17="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="PacienteFallecido" nillable="true" type="tns:PacienteFallecido"/>
+      <xs:complexType name="DatosHistoriaSinPaciente">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="FechaCreacion" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="FechaModificacion" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="NHC" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TipoPaciente" nillable="true" type="q18:TipoPacienteMaestro" xmlns:q18="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Maestros"/>
+          <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="UsuarioModificacion" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DatosHistoriaSinPaciente" nillable="true" type="tns:DatosHistoriaSinPaciente"/>
+      <xs:complexType name="ArrayOfDatosHistoriaSinPaciente">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="DatosHistoriaSinPaciente" nillable="true" type="tns:DatosHistoriaSinPaciente"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfDatosHistoriaSinPaciente" nillable="true" type="tns:ArrayOfDatosHistoriaSinPaciente"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades">
+      <xs:simpleType name="eSexo">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Desconocido"/>
+          <xs:enumeration value="Hombre"/>
+          <xs:enumeration value="Mujer"/>
+          <xs:enumeration value="Indeterminado"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="eSexo" nillable="true" type="tns:eSexo"/>
+      <xs:simpleType name="eSituacionPaciente">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SinDeterminar"/>
+          <xs:enumeration value="Exitus"/>
+          <xs:enumeration value="Exitus_X"/>
+          <xs:enumeration value="Duplicada"/>
+          <xs:enumeration value="Regularizada"/>
+          <xs:enumeration value="Situacion_A"/>
+          <xs:enumeration value="Situacion_P"/>
+          <xs:enumeration value="Situacion_S"/>
+          <xs:enumeration value="Situacion_W"/>
+          <xs:enumeration value="Situacion_Z"/>
+          <xs:enumeration value="Situacion_0"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="eSituacionPaciente" nillable="true" type="tns:eSituacionPaciente"/>
+      <xs:simpleType name="eIdioma">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Desconocido"/>
+          <xs:enumeration value="Castellano"/>
+          <xs:enumeration value="Euskera"/>
+          <xs:enumeration value="Bilingue"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="eIdioma" nillable="true" type="tns:eIdioma"/>
+      <xs:simpleType name="eTipoPlaza">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SinDeterminar"/>
+          <xs:enumeration value="Primaria"/>
+          <xs:enumeration value="Especializada"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="eTipoPlaza" nillable="true" type="tns:eTipoPlaza"/>
+      <xs:simpleType name="eTipoRestriccionLeire">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NoRestriccion"/>
+          <xs:enumeration value="NoTelefono"/>
+          <xs:enumeration value="NoCarta"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="eTipoRestriccionLeire" nillable="true" type="tns:eTipoRestriccionLeire"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades"/>
+      <xs:complexType name="Autonomia">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Autonomia" nillable="true" type="tns:Autonomia"/>
+      <xs:complexType name="GestionDeCambio">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Creado" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="CreadoPor" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Modificado" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="ModificadoPor" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GestionDeCambio" nillable="true" type="tns:GestionDeCambio"/>
+      <xs:complexType name="Medico">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="CIAS" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LugarTrabajo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TipoMedico" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TipoMedicoPlaza" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TipoPlaza" type="q1:eTipoPlaza" xmlns:q1="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Medico" nillable="true" type="tns:Medico"/>
+      <xs:complexType name="Pais">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Pais" nillable="true" type="tns:Pais"/>
+      <xs:complexType name="Provincia">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CodigoAutonomia" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="CodigoTIS" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Provincia" nillable="true" type="tns:Provincia"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+      <xs:complexType name="ArrayOfstring">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://sanidad.navarra.es/LEIRE/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://sanidad.navarra.es/LEIRE/">
+      <xs:simpleType name="eTipoEtiquetaListaPacientes">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="CodigoBarrasPaciente"/>
+          <xs:enumeration value="CodigoBarrasIngreso"/>
+          <xs:enumeration value="Laboratorio"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="eTipoEtiquetaListaPacientes" nillable="true" type="tns:eTipoEtiquetaListaPacientes"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Maestros" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Maestros">
+      <xs:complexType name="TipoPacienteMaestro">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="IdDB2" type="xs:int"/>
+          <xs:element minOccurs="0" name="IdTipoPaciente" type="xs:int"/>
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Plantillas" nillable="true" type="tns:ArrayOfPlantillaTipoPaciente"/>
+          <xs:element minOccurs="0" name="TipoAparato" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="TipoPacienteMaestro" nillable="true" type="tns:TipoPacienteMaestro"/>
+      <xs:complexType name="ArrayOfPlantillaTipoPaciente">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="PlantillaTipoPaciente" nillable="true" type="tns:PlantillaTipoPaciente"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfPlantillaTipoPaciente" nillable="true" type="tns:ArrayOfPlantillaTipoPaciente"/>
+      <xs:complexType name="PlantillaTipoPaciente">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Required" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="PlantillaTipoPaciente" nillable="true" type="tns:PlantillaTipoPaciente"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IPacientes_RecuperarHistoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarHistoria"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_RecuperarHistoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarHistoriaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_BuscarHistorias_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarHistorias"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_BuscarHistorias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarHistoriasResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_RecuperarDatosNotificacionPaciente_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosNotificacionPaciente"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_RecuperarDatosNotificacionPaciente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarDatosNotificacionPacienteResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_RecuperarNumeroHistoriaCipna_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarNumeroHistoriaCipna"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_RecuperarNumeroHistoriaCipna_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarNumeroHistoriaCipnaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_RecuperarEventosRNHC_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarEventosRNHC"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_RecuperarEventosRNHC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarEventosRNHCResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_GenerarEtiquetasPacientesIngresos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarEtiquetasPacientesIngresos"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_GenerarEtiquetasPacientesIngresos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarEtiquetasPacientesIngresosResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_RecuperarPacientesFallecidos_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarPacientesFallecidos"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_RecuperarPacientesFallecidos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarPacientesFallecidosResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_RecuperarHistoriaSinPaciente_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarHistoriaSinPaciente"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_RecuperarHistoriaSinPaciente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarHistoriaSinPacienteResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_BuscarHistoriasSinPaciente_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarHistoriasSinPaciente"/>
+  </wsdl:message>
+  <wsdl:message name="IPacientes_BuscarHistoriasSinPaciente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarHistoriasSinPacienteResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IPacientes">
+    <wsdl:operation name="RecuperarHistoria">
+      <wsdl:input wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarHistoria" message="tns:IPacientes_RecuperarHistoria_InputMessage"/>
+      <wsdl:output wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarHistoriaResponse" message="tns:IPacientes_RecuperarHistoria_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarHistorias">
+      <wsdl:input wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/BuscarHistorias" message="tns:IPacientes_BuscarHistorias_InputMessage"/>
+      <wsdl:output wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/BuscarHistoriasResponse" message="tns:IPacientes_BuscarHistorias_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosNotificacionPaciente">
+      <wsdl:input wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarDatosNotificacionPaciente" message="tns:IPacientes_RecuperarDatosNotificacionPaciente_InputMessage"/>
+      <wsdl:output wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarDatosNotificacionPacienteResponse" message="tns:IPacientes_RecuperarDatosNotificacionPaciente_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarNumeroHistoriaCipna">
+      <wsdl:input wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarNumeroHistoriaCipna" message="tns:IPacientes_RecuperarNumeroHistoriaCipna_InputMessage"/>
+      <wsdl:output wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarNumeroHistoriaCipnaResponse" message="tns:IPacientes_RecuperarNumeroHistoriaCipna_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarEventosRNHC">
+      <wsdl:input wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarEventosRNHC" message="tns:IPacientes_RecuperarEventosRNHC_InputMessage"/>
+      <wsdl:output wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarEventosRNHCResponse" message="tns:IPacientes_RecuperarEventosRNHC_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarEtiquetasPacientesIngresos">
+      <wsdl:input wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/GenerarEtiquetasPacientesIngresos" message="tns:IPacientes_GenerarEtiquetasPacientesIngresos_InputMessage"/>
+      <wsdl:output wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/GenerarEtiquetasPacientesIngresosResponse" message="tns:IPacientes_GenerarEtiquetasPacientesIngresos_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarPacientesFallecidos">
+      <wsdl:input wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarPacientesFallecidos" message="tns:IPacientes_RecuperarPacientesFallecidos_InputMessage"/>
+      <wsdl:output wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarPacientesFallecidosResponse" message="tns:IPacientes_RecuperarPacientesFallecidos_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarHistoriaSinPaciente">
+      <wsdl:input wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarHistoriaSinPaciente" message="tns:IPacientes_RecuperarHistoriaSinPaciente_InputMessage"/>
+      <wsdl:output wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarHistoriaSinPacienteResponse" message="tns:IPacientes_RecuperarHistoriaSinPaciente_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarHistoriasSinPaciente">
+      <wsdl:input wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/BuscarHistoriasSinPaciente" message="tns:IPacientes_BuscarHistoriasSinPaciente_InputMessage"/>
+      <wsdl:output wsaw:Action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/BuscarHistoriasSinPacienteResponse" message="tns:IPacientes_BuscarHistoriasSinPaciente_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPacientes" type="tns:IPacientes">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RecuperarHistoria">
+      <soap:operation soapAction="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarHistoria" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarHistorias">
+      <soap:operation soapAction="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/BuscarHistorias" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarDatosNotificacionPaciente">
+      <soap:operation soapAction="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarDatosNotificacionPaciente" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarNumeroHistoriaCipna">
+      <soap:operation soapAction="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarNumeroHistoriaCipna" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarEventosRNHC">
+      <soap:operation soapAction="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarEventosRNHC" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarEtiquetasPacientesIngresos">
+      <soap:operation soapAction="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/GenerarEtiquetasPacientesIngresos" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarPacientesFallecidos">
+      <soap:operation soapAction="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarPacientesFallecidos" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarHistoriaSinPaciente">
+      <soap:operation soapAction="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarHistoriaSinPaciente" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarHistoriasSinPaciente">
+      <soap:operation soapAction="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/BuscarHistoriasSinPaciente" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Pacientes">
+    <wsdl:port name="BasicHttpBinding_IPacientes" binding="tns:BasicHttpBinding_IPacientes">
+      <soap:address location="http://val-backend.admon-cfnavarra.es:8080/GN.Sanidad.LEIRE.IC/Pacientes.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://SIDT0020090BF:8088/mockPacientes</con:endpoint><con:endpoint>http://val-backend.admon-cfnavarra.es:8080/GN.Sanidad.LEIRE.IC/Pacientes.svc</con:endpoint></con:endpoints><con:operation id="7ab1f810-33aa-4c36-b22a-2441fabdf457" isOneWay="false" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/BuscarHistorias" name="BuscarHistorias" bindingOperationName="BuscarHistorias" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a768b756-0323-4cde-be0a-dfda529cb67d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://val-backend.admon-cfnavarra.es:8080/GN.Sanidad.LEIRE.IC/Pacientes.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pac="http://sanidad.navarra.es/LEIRE/IC/Pacientes/" xmlns:gn="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO" xmlns:ic="http://sanidad.navarra.es/LEIRE/IC/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pac:BuscarHistorias>\r
+         <!--Optional:-->\r
+         <pac:filtro>\r
+            <!--Optional:-->\r
+            <gn:CodigoPrograma>?</gn:CodigoPrograma>\r
+            <!--Optional:-->\r
+            <ic:Apellido1>?</ic:Apellido1>\r
+            <!--Optional:-->\r
+            <ic:Apellido2>?</ic:Apellido2>\r
+            <!--Optional:-->\r
+            <ic:Cipna>?</ic:Cipna>\r
+            <!--Optional:-->\r
+            <ic:FechaNacimiento>?</ic:FechaNacimiento>\r
+            <!--Optional:-->\r
+            <ic:Nif>?</ic:Nif>\r
+            <!--Optional:-->\r
+            <ic:Nombre>?</ic:Nombre>\r
+            <!--Optional:-->\r
+            <ic:NumHistoria>?</ic:NumHistoria>\r
+         </pac:filtro>\r
+      </pac:BuscarHistorias>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/BuscarHistorias"/></con:call></con:operation><con:operation id="f1ef99f5-d1fd-456c-9a37-9d98395d2c70" isOneWay="false" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/BuscarHistoriasSinPaciente" name="BuscarHistoriasSinPaciente" bindingOperationName="BuscarHistoriasSinPaciente" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7f718012-d629-423c-9b1e-8257664405de" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://val-backend.admon-cfnavarra.es:8080/GN.Sanidad.LEIRE.IC/Pacientes.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pac="http://sanidad.navarra.es/LEIRE/IC/Pacientes/" xmlns:gn="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO" xmlns:ic="http://sanidad.navarra.es/LEIRE/IC/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pac:BuscarHistoriasSinPaciente>\r
+         <!--Optional:-->\r
+         <pac:filtro>\r
+            <!--Optional:-->\r
+            <gn:CodigoPrograma>?</gn:CodigoPrograma>\r
+            <!--Optional:-->\r
+            <ic:IdTipoPaciente>?</ic:IdTipoPaciente>\r
+            <!--Optional:-->\r
+            <ic:NHC>?</ic:NHC>\r
+            <!--Optional:-->\r
+            <ic:Nombre>?</ic:Nombre>\r
+            <!--Optional:-->\r
+            <ic:ObtenerInactivos>?</ic:ObtenerInactivos>\r
+         </pac:filtro>\r
+      </pac:BuscarHistoriasSinPaciente>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/BuscarHistoriasSinPaciente"/></con:call></con:operation><con:operation id="832ca7ab-c408-47db-915d-3ab940832c89" isOneWay="false" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/GenerarEtiquetasPacientesIngresos" name="GenerarEtiquetasPacientesIngresos" bindingOperationName="GenerarEtiquetasPacientesIngresos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4dc499a3-2170-406b-90c8-0b14f3c1be93" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://val-backend.admon-cfnavarra.es:8080/GN.Sanidad.LEIRE.IC/Pacientes.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pac="http://sanidad.navarra.es/LEIRE/IC/Pacientes/" xmlns:gn="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO" xmlns:ic="http://sanidad.navarra.es/LEIRE/IC/" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pac:GenerarEtiquetasPacientesIngresos>\r
+         <!--Optional:-->\r
+         <pac:filtro>\r
+            <!--Optional:-->\r
+            <gn:CodigoPrograma>?</gn:CodigoPrograma>\r
+            <!--Optional:-->\r
+            <ic:CodigoComplejo>?</ic:CodigoComplejo>\r
+            <!--Optional:-->\r
+            <ic:Historias>\r
+               <!--Zero or more repetitions:-->\r
+               <arr:string>?</arr:string>\r
+            </ic:Historias>\r
+            <!--Optional:-->\r
+            <ic:TipoEtiquetaListaPacientes>?</ic:TipoEtiquetaListaPacientes>\r
+         </pac:filtro>\r
+      </pac:GenerarEtiquetasPacientesIngresos>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/GenerarEtiquetasPacientesIngresos"/></con:call></con:operation><con:operation id="cc74ca55-badc-4407-a00f-b52e01818e08" isOneWay="false" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarDatosNotificacionPaciente" name="RecuperarDatosNotificacionPaciente" bindingOperationName="RecuperarDatosNotificacionPaciente" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b79d7ccf-d7b2-4372-bdbc-6bba8830cd60" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://val-backend.admon-cfnavarra.es:8080/GN.Sanidad.LEIRE.IC/Pacientes.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pac="http://sanidad.navarra.es/LEIRE/IC/Pacientes/" xmlns:gn="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO" xmlns:ic="http://sanidad.navarra.es/LEIRE/IC/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pac:RecuperarDatosNotificacionPaciente>\r
+         <!--Optional:-->\r
+         <pac:filtro>\r
+            <!--Optional:-->\r
+            <gn:CodigoPrograma>?</gn:CodigoPrograma>\r
+            <!--Optional:-->\r
+            <ic:Cipna>?</ic:Cipna>\r
+            <!--Optional:-->\r
+            <ic:NumHistoria>?</ic:NumHistoria>\r
+         </pac:filtro>\r
+      </pac:RecuperarDatosNotificacionPaciente>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarDatosNotificacionPaciente"/></con:call></con:operation><con:operation id="a89dc3f0-78a3-4064-9ab1-752b3b425a62" isOneWay="false" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarEventosRNHC" name="RecuperarEventosRNHC" bindingOperationName="RecuperarEventosRNHC" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="09193809-4189-4e06-b82c-466aa83bc5d5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://val-backend.admon-cfnavarra.es:8080/GN.Sanidad.LEIRE.IC/Pacientes.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pac="http://sanidad.navarra.es/LEIRE/IC/Pacientes/" xmlns:gn="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO" xmlns:ic="http://sanidad.navarra.es/LEIRE/IC/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pac:RecuperarEventosRNHC>\r
+         <!--Optional:-->\r
+         <pac:filtro>\r
+            <!--Optional:-->\r
+            <gn:CodigoPrograma>?</gn:CodigoPrograma>\r
+            <!--Optional:-->\r
+            <ic:IdEvento>?</ic:IdEvento>\r
+         </pac:filtro>\r
+      </pac:RecuperarEventosRNHC>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarEventosRNHC"/></con:call></con:operation><con:operation id="38f18047-2830-4fcf-a219-42de4b4f70a0" isOneWay="false" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarHistoria" name="RecuperarHistoria" bindingOperationName="RecuperarHistoria" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2d522f2e-5368-4f25-83dd-1f665710a400" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://val-backend.admon-cfnavarra.es:8080/GN.Sanidad.LEIRE.IC/Pacientes.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pac="http://sanidad.navarra.es/LEIRE/IC/Pacientes/" xmlns:gn="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO" xmlns:ic="http://sanidad.navarra.es/LEIRE/IC/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pac:RecuperarHistoria>\r
+         <!--Optional:-->\r
+         <pac:filtro>\r
+            <!--Optional:-->\r
+            <gn:CodigoPrograma>?</gn:CodigoPrograma>\r
+            <!--Optional:-->\r
+            <ic:CIPNA>?</ic:CIPNA>\r
+            <!--Optional:-->\r
+            <ic:NumeroHistoria>?</ic:NumeroHistoria>\r
+         </pac:filtro>\r
+      </pac:RecuperarHistoria>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarHistoria"/></con:call></con:operation><con:operation id="eba55ffd-a7e6-4141-85d8-5b69cfaad681" isOneWay="false" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarHistoriaSinPaciente" name="RecuperarHistoriaSinPaciente" bindingOperationName="RecuperarHistoriaSinPaciente" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fbe845f9-3728-4c82-85d4-ff5f29f87240" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://val-backend.admon-cfnavarra.es:8080/GN.Sanidad.LEIRE.IC/Pacientes.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pac="http://sanidad.navarra.es/LEIRE/IC/Pacientes/" xmlns:gn="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO" xmlns:ic="http://sanidad.navarra.es/LEIRE/IC/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pac:RecuperarHistoriaSinPaciente>\r
+         <!--Optional:-->\r
+         <pac:filtro>\r
+            <!--Optional:-->\r
+            <gn:CodigoPrograma>?</gn:CodigoPrograma>\r
+            <!--Optional:-->\r
+            <ic:NHC>?</ic:NHC>\r
+         </pac:filtro>\r
+      </pac:RecuperarHistoriaSinPaciente>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarHistoriaSinPaciente"/></con:call></con:operation><con:operation id="7d142afe-6ace-4690-8c34-71cdc8019693" isOneWay="false" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarNumeroHistoriaCipna" name="RecuperarNumeroHistoriaCipna" bindingOperationName="RecuperarNumeroHistoriaCipna" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4601026f-daa4-4fdf-a7c2-45c7e1bb17b5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://val-backend.admon-cfnavarra.es:8080/GN.Sanidad.LEIRE.IC/Pacientes.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pac="http://sanidad.navarra.es/LEIRE/IC/Pacientes/" xmlns:gn="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO" xmlns:ic="http://sanidad.navarra.es/LEIRE/IC/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pac:RecuperarNumeroHistoriaCipna>\r
+         <!--Optional:-->\r
+         <pac:filtro>\r
+            <!--Optional:-->\r
+            <gn:CodigoPrograma>?</gn:CodigoPrograma>\r
+            <!--Optional:-->\r
+            <ic:CIPNA>?</ic:CIPNA>\r
+            <!--Optional:-->\r
+            <ic:NumeroHistoria>?</ic:NumeroHistoria>\r
+         </pac:filtro>\r
+      </pac:RecuperarNumeroHistoriaCipna>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarNumeroHistoriaCipna"/></con:call></con:operation><con:operation id="8ee7a77c-b056-48d1-bd4c-c70417b8dbaa" isOneWay="false" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarPacientesFallecidos" name="RecuperarPacientesFallecidos" bindingOperationName="RecuperarPacientesFallecidos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8b17bd25-1d71-47d1-b11b-c26c4141446f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://val-backend.admon-cfnavarra.es:8080/GN.Sanidad.LEIRE.IC/Pacientes.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pac="http://sanidad.navarra.es/LEIRE/IC/Pacientes/" xmlns:gn="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO" xmlns:ic="http://sanidad.navarra.es/LEIRE/IC/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pac:RecuperarPacientesFallecidos>\r
+         <!--Optional:-->\r
+         <pac:filtro>\r
+            <!--Optional:-->\r
+            <gn:CodigoPrograma>?</gn:CodigoPrograma>\r
+            <!--Optional:-->\r
+            <ic:FechaFallecDesde>?</ic:FechaFallecDesde>\r
+            <!--Optional:-->\r
+            <ic:FechaFallecHasta>?</ic:FechaFallecHasta>\r
+         </pac:filtro>\r
+      </pac:RecuperarPacientesFallecidos>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarPacientesFallecidos"/></con:call></con:operation></con:interface><con:testSuite id="e07071b7-c799-4b56-a136-ec963c163991" name="PacientesTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ec10bf33-9c82-422a-9905-39f7c284359e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="RecuperarHistoria TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="f9699354-9a3e-44f8-852a-4fac46978c6a" name="RecuperarHistoria1 Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BasicHttpBinding_IPacientes</con:interface><con:operation>RecuperarHistoria</con:operation><con:request name="RecuperarHistoria1 Request" id="ab2e9217-f25f-4d48-8e6b-97051be09a8c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://SIDT0020090BF:8088/mockPacientes</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pac="http://sanidad.navarra.es/LEIRE/IC/Pacientes/" xmlns:gn="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.DTO" xmlns:ic="http://sanidad.navarra.es/LEIRE/IC/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <pac:RecuperarHistoria>\r
+         <!--Optional:-->\r
+         <pac:filtro>\r
+            <!--Optional:-->\r
+            <gn:CodigoPrograma>a2361cb1-5573-4781-b8a2-cbb3e3e08059</gn:CodigoPrograma>\r
+            <!--Optional:-->\r
+            <ic:CIPNA></ic:CIPNA>\r
+            <!--Optional:-->\r
+            <ic:NumeroHistoria>81</ic:NumeroHistoria>\r
+         </pac:filtro>\r
+      </pac:RecuperarHistoria>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarHistoria" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="923b8f75-b9fc-41c3-9b49-e5b6907cdc86" port="8088" path="/mockPacientes" host="SIDT0020090BF" name="leire"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties><con:property><con:name>version</con:name><con:value>1.0</con:value></con:property></con:properties><con:mockOperation name="RecuperarHistoria" id="68fb56f6-1c97-4873-a90c-d78defe1a23d" interface="BasicHttpBinding_IPacientes" operation="RecuperarHistoria"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>RANDOM</con:dispatchStyle><con:response name="RecuperarHistoria1 Response" id="0aacea7f-a7d6-440a-b873-5026c967aee1" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <RecuperarHistoriaResponse xmlns="http://sanidad.navarra.es/LEIRE/IC/Pacientes/">
+      <RecuperarHistoriaResult xmlns:a="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Resultados" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:EsCorrecto>true</a:EsCorrecto>
+        <a:MensajeError/>
+        <a:Historia xmlns:b="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.Pacientes">
+          <b:Apellido1>MARTIN</b:Apellido1>
+          <b:Apellido2>ORTIZ</b:Apellido2>
+          <b:Cipna/>
+          <b:FechaNacimiento>1989-10-17T00:00:00</b:FechaNacimiento>
+          <b:Nif/>
+          <b:Nombre>MANUEL</b:Nombre>
+          <b:NombreUso>MANUEL</b:NombreUso>
+          <b:NumHistoria>000000000081</b:NumHistoria>
+          <b:NumSeguridadSocial/>
+          <b:Sexo>Mujer</b:Sexo>
+          <b:SexoBiologico>Mujer</b:SexoBiologico>
+          <b:SexoSentido>Mujer</b:SexoSentido>
+          <b:Situacion>SinDeterminar</b:Situacion>
+          <b:Autonomia xmlns:c="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General">
+            <c:Codigo>15</c:Codigo>
+            <c:Nombre>NAVARRA</c:Nombre>
+          </b:Autonomia>
+          <b:CodPostal>31012</b:CodPostal>
+          <b:CustodiaCompartida>false</b:CustodiaCompartida>
+          <b:DatosCopago>
+            <b:GrupoFarmacia>
+              <b:Codigo/>
+              <b:Nombre/>
+            </b:GrupoFarmacia>
+            <b:SubgrupoFarmacia>
+              <b:Codigo/>
+              <b:Nombre/>
+            </b:SubgrupoFarmacia>
+          </b:DatosCopago>
+          <b:Direccion>TRAV.DEL MUELLE,8-5ºD</b:Direccion>
+          <b:Email/>
+          <b:EmpresaGrupoAsistencial>
+            <b:Codigo/>
+            <b:Nombre/>
+          </b:EmpresaGrupoAsistencial>
+          <b:EsDuplicado>false</b:EsDuplicado>
+          <b:EsFallecido>false</b:EsFallecido>
+          <b:FechaFallecimiento>9999-12-31T00:00:00</b:FechaFallecimiento>
+          <b:GestionCambios xmlns:c="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General">
+            <c:Creado>1997-10-23T00:00:00</c:Creado>
+            <c:CreadoPor/>
+            <c:Modificado>0001-01-01T00:00:00</c:Modificado>
+            <c:ModificadoPor>MVTOUBI</c:ModificadoPor>
+          </b:GestionCambios>
+          <b:GrupoAsistencial>
+            <b:Codigo>02</b:Codigo>
+            <b:CodigoCIASDefecto>900000009999</b:CodigoCIASDefecto>
+            <b:Nombre>S.S. PENSIONISTA</b:Nombre>
+            <b:RestriccionesEmpresa/>
+            <b:TipoUsuarioDefecto>0</b:TipoUsuarioDefecto>
+            <b:TiposNoPermitidos xmlns:c="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+              <c:string>F                                                 </c:string>
+            </b:TiposNoPermitidos>
+            <b:Visible>false</b:Visible>
+          </b:GrupoAsistencial>
+          <b:HistoriaConPaciente>true</b:HistoriaConPaciente>
+          <b:Idioma>Castellano</b:Idioma>
+          <b:LocalidadResidencia>PAMPLONA / IRUÑA</b:LocalidadResidencia>
+          <b:MedicoCabecera xmlns:c="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General">
+            <c:Activo>true</c:Activo>
+            <c:CIAS>01501160104Z</c:CIAS>
+            <c:Codigo>3106318</c:Codigo>
+            <c:LugarTrabajo>116</c:LugarTrabajo>
+            <c:Nombre>MIKO,RIOLOBO,CHANIYA</c:Nombre>
+            <c:TipoMedico>C</c:TipoMedico>
+            <c:TipoMedicoPlaza>C</c:TipoMedicoPlaza>
+            <c:TipoPlaza>Primaria</c:TipoPlaza>
+          </b:MedicoCabecera>
+          <b:NotificacionCarta>true</b:NotificacionCarta>
+          <b:NotificacionEmail>false</b:NotificacionEmail>
+          <b:NotificacionSMS>false</b:NotificacionSMS>
+          <b:NumHistoriaAntiguo/>
+          <b:NumHistoriaCorrecto/>
+          <b:Observaciones/>
+          <b:PaisNacimiento xmlns:c="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General">
+            <c:Activo>false</c:Activo>
+            <c:Codigo>108</c:Codigo>
+            <c:Nombre>ESPAÑA</c:Nombre>
+          </b:PaisNacimiento>
+          <b:PaisResidencia xmlns:c="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General">
+            <c:Activo>false</c:Activo>
+            <c:Codigo>108</c:Codigo>
+            <c:Nombre>ESPAÑA</c:Nombre>
+          </b:PaisResidencia>
+          <b:Pasaporte/>
+          <b:ProvinciaResidencia xmlns:c="http://schemas.datacontract.org/2004/07/GN.Sanidad.LEIRE.Entidades.General">
+            <c:Codigo>NA</c:Codigo>
+            <c:CodigoAutonomia>15</c:CodigoAutonomia>
+            <c:CodigoTIS>31</c:CodigoTIS>
+            <c:Nombre>NAVARRA</c:Nombre>
+          </b:ProvinciaResidencia>
+          <b:RestriccionPaciente>NoRestriccion</b:RestriccionPaciente>
+          <b:Telefono>948355872</b:Telefono>
+          <b:Telefono2/>
+        </a:Historia>
+      </RecuperarHistoriaResult>
+    </RecuperarHistoriaResponse>
+  </s:Body>
+</s:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sanidad.navarra.es/LEIRE/IC/Pacientes/IPacientes/RecuperarHistoria"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
