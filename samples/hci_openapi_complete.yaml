@@ -1828,6 +1828,153 @@ paths:
                     error: null
                     success: true
                     statusCode: OK
+                ?nhc=81?incluirHistorico=false:
+                  value:
+                    response:
+                      correcto: true
+                      error: ''
+                      exploraciones:
+                      - guidSolitudPeticion: f8c5ce32-0e80-40d1-a8b4-5565e0884a1b
+                        idLinea: 1570765
+                        volante:
+                          centroHistoria: '01'
+                          idVolante: 1130526
+                          idServicioPeticionario: 4000
+                          nombreServicioPeticionario: MEDICINA INTERNA
+                          medicoSolicitante:
+                            id: 'D641389 '
+                            nombreCompleto: Dr. Echarri Michelena Christian
+                            dni: 44641389E
+                            numeroColegiado: '3100688'
+                            tipo:
+                              M: Médico
+                          usuarioSolicitante: null
+                          codigoProcedencia: I
+                          nombreProcedencia: Ingresados
+                          idEpisodio: '0'
+                          ubicacion: ''
+                          fechaHoraSolicitudVolante: '2025-11-06T13:38:36.9'
+                        prestacion:
+                          id: 111964
+                          nombre: Angioedema Hereditario
+                          ruta: ALERGOLOGÍA
+                          nombreLargo: ALERGOLOGÍA - Angioedema Hereditario
+                          idFichaRespuesta: 786
+                          nombreFichaRespuesta: ESTUDIO GENÉTICO MOLECULAR
+                        estado: S
+                        idServicioReceptor: 1200
+                        nombreServicioReceptor: Genética HUN- NOU
+                        fechaHoraSolicitudPrestacion: '2025-11-06T13:38:36.9'
+                        fechaRealizarAPartirDe: null
+                        codigoPrioridad: N
+                        nombrePrioridad: Normal
+                        codigoFinalidad: Seguimiento
+                        nombreFinalidad: Seguimiento
+                        motivoCodificado: '[8816]'
+                        motivoDecodificado: alteración del desarrollo pondoestatural
+                        observaciones: Observaciones con un motivo codificado
+                        infoRealizacionPeticion: null
+                        infoRespuestaPeticion: null
+                        infoValidacionPeticion: null
+                        infoAnulacionPeticion: null
+                    error: null
+                    success: true
+                    statusCode: OK
+                ?nhc=81?incluirHistorico=true:
+                  value:
+                    response:
+                      correcto: true
+                      error: ''
+                      exploraciones:
+                      - guidSolitudPeticion: f8c5ce32-0e80-40d1-a8b4-5565e0884a1b
+                        idLinea: 1570765
+                        volante:
+                          centroHistoria: '01'
+                          idVolante: 1130526
+                          idServicioPeticionario: 4000
+                          nombreServicioPeticionario: MEDICINA INTERNA
+                          medicoSolicitante:
+                            id: 'D641389 '
+                            nombreCompleto: Dr. Echarri Michelena Christian
+                            dni: 44641389E
+                            numeroColegiado: '3100688'
+                            tipo:
+                              M: Médico
+                          usuarioSolicitante: null
+                          codigoProcedencia: I
+                          nombreProcedencia: Ingresados
+                          idEpisodio: '0'
+                          ubicacion: ''
+                          fechaHoraSolicitudVolante: '2025-11-06T13:38:36.9'
+                        prestacion:
+                          id: 111964
+                          nombre: Angioedema Hereditario
+                          ruta: ALERGOLOGÍA
+                          nombreLargo: ALERGOLOGÍA - Angioedema Hereditario
+                          idFichaRespuesta: 786
+                          nombreFichaRespuesta: ESTUDIO GENÉTICO MOLECULAR
+                        estado: S
+                        idServicioReceptor: 1200
+                        nombreServicioReceptor: Genética HUN- NOU
+                        fechaHoraSolicitudPrestacion: '2025-11-06T13:38:36.9'
+                        fechaRealizarAPartirDe: null
+                        codigoPrioridad: N
+                        nombrePrioridad: Normal
+                        codigoFinalidad: Seguimiento
+                        nombreFinalidad: Seguimiento
+                        motivoCodificado: '[8816]'
+                        motivoDecodificado: alteración del desarrollo pondoestatural
+                        observaciones: Observaciones con un motivo codificado
+                        infoRealizacionPeticion: null
+                        infoRespuestaPeticion: null
+                        infoValidacionPeticion: null
+                        infoAnulacionPeticion: null
+                      - guidSolitudPeticion: 58933465-d755-49e1-8ba7-7203a3b4471c
+                        idLinea: 1570766
+                        volante:
+                          centroHistoria: '01'
+                          idVolante: 1130527
+                          idServicioPeticionario: 20200
+                          nombreServicioPeticionario: CARDIOLOGIA - UNIDAD CORONARIA
+                          medicoSolicitante:
+                            id: E3106220
+                            nombreCompleto: Dra. Fernández Jarne Elena
+                            dni: 44622012B
+                            numeroColegiado: '3106220'
+                            tipo:
+                              E: Enfermera
+                          usuarioSolicitante: null
+                          codigoProcedencia: Q
+                          nombreProcedencia: Quirófano
+                          idEpisodio: '0'
+                          ubicacion: ''
+                          fechaHoraSolicitudVolante: '2025-11-06T13:51:50.42'
+                        prestacion:
+                          id: 111671
+                          nombre: Poliquistosis renal AR
+                          ruta: PATOLOGÍA RENAL
+                          nombreLargo: PATOLOGÍA RENAL - Poliquistosis renal AR
+                          idFichaRespuesta: 786
+                          nombreFichaRespuesta: ESTUDIO GENÉTICO MOLECULAR
+                        estado: A
+                        idServicioReceptor: 1200
+                        nombreServicioReceptor: Genética HUN- NOU
+                        fechaHoraSolicitudPrestacion: '2025-11-06T13:51:50.42'
+                        fechaRealizarAPartirDe: null
+                        codigoPrioridad: N
+                        nombrePrioridad: Normal
+                        codigoFinalidad: Diagnostico
+                        nombreFinalidad: Diagnóstico/Tratamiento
+                        motivoCodificado: '[8836]'
+                        motivoDecodificado: trombofilia
+                        observaciones: ''
+                        infoRealizacionPeticion: null
+                        infoRespuestaPeticion: null
+                        infoValidacionPeticion: null
+                        infoAnulacionPeticion: null
+                    error: null
+                    success: true
+                    statusCode: OK
   /api/externos/PlataformaGenomica/exploraciones/anulaciones:
     post:
       tags:
