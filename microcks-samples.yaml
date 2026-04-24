@@ -6,7 +6,7 @@ metadata:
     microcks.io/instance: microcks
 spec:
   artifacts:
-    - url: https://setools.t-systems.es/gitlab/health/genomica/commons/infra/microcks/-/raw/main/samples/hci_openapi_complete.yaml?ref_type=heads
+    - url: https://raw.githubusercontent.com/vmarzal/microcks/refs/heads/main/samples/hci_openapi_complete.yaml
       mainArtifact: true
-    - url: https://setools.t-systems.es/gitlab/health/genomica/commons/infra/microcks/-/raw/main/samples/leire.soapui.xml?ref_type=heads
+    - url: https://raw.githubusercontent.com/vmarzal/microcks/refs/heads/main/samples/leire.soapui.xml
       mainArtifact: true
