@@ -1828,6 +1828,58 @@ paths:
                     error: null
                     success: true
                     statusCode: OK
+                ?incluirHistorico=false?nhc=81:
+                  value:
+                    response:
+                      correcto: true
+                      error: ''
+                      exploraciones:
+                      - guidSolitudPeticion: f8c5ce32-0e80-40d1-a8b4-5565e0884a1b
+                        idLinea: 1570765
+                        volante:
+                          centroHistoria: '01'
+                          idVolante: 1130526
+                          idServicioPeticionario: 4000
+                          nombreServicioPeticionario: MEDICINA INTERNA
+                          medicoSolicitante:
+                            id: 'D641389 '
+                            nombreCompleto: Dr. Echarri Michelena Christian
+                            dni: 44641389E
+                            numeroColegiado: '3100688'
+                            tipo:
+                              M: Médico
+                          usuarioSolicitante: null
+                          codigoProcedencia: I
+                          nombreProcedencia: Ingresados
+                          idEpisodio: '0'
+                          ubicacion: ''
+                          fechaHoraSolicitudVolante: '2025-11-06T13:38:36.9'
+                        prestacion:
+                          id: 111964
+                          nombre: Angioedema Hereditario
+                          ruta: ALERGOLOGÍA
+                          nombreLargo: ALERGOLOGÍA - Angioedema Hereditario
+                          idFichaRespuesta: 786
+                          nombreFichaRespuesta: ESTUDIO GENÉTICO MOLECULAR
+                        estado: S
+                        idServicioReceptor: 1200
+                        nombreServicioReceptor: Genética HUN- NOU
+                        fechaHoraSolicitudPrestacion: '2025-11-06T13:38:36.9'
+                        fechaRealizarAPartirDe: null
+                        codigoPrioridad: N
+                        nombrePrioridad: Normal
+                        codigoFinalidad: Seguimiento
+                        nombreFinalidad: Seguimiento
+                        motivoCodificado: '[8816]'
+                        motivoDecodificado: alteración del desarrollo pondoestatural
+                        observaciones: Observaciones con un motivo codificado
+                        infoRealizacionPeticion: null
+                        infoRespuestaPeticion: null
+                        infoValidacionPeticion: null
+                        infoAnulacionPeticion: null
+                    error: null
+                    success: true
+                    statusCode: OK
                 ?nhc=81?incluirHistorico=false:
                   value:
                     response:
