@@ -1,0 +1,108 @@
+openapi: 3.0.1
+info:
+  title: nextflow
+  description: |
+    API de Nextflow mockeada en Microcks para la plataforma TSuPreMe.
+    Expone los endpoints de creación y lanzamiento de workflows.
+  contact:
+    name: Plataforma Genomica TSuPreMe
+  version: 1.0.0
+servers:
+  - url: /rest/nextflow/1.0.0
+    description: Endpoint del mock servido por Microcks
+tags:
+  - name: Workflows
+    description: Gestión y ejecución de workflows de Nextflow
+paths:
+  /api/workflows/0:
+    post:
+      tags:
+        - Workflows
+      operationId: createWorkflow
+      summary: Crea (registra) un nuevo workflow
+      description: >-
+        Recibe la definición de un workflow y devuelve el identificador
+        generado para el mismo.
+      requestBody:
+        required: false
+        description: Definición del workflow a registrar
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+            examples:
+              created:
+                summary: Ejemplo de definición de workflow
+                value:
+                  name: my-nextflow-workflow
+                  pipeline: nf-core/rnaseq
+                  params:
+                    input: s3://bucket/samplesheet.csv
+                    outdir: s3://bucket/results
+      responses:
+        '200':
+          description: Workflow creado correctamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  _id:
+                    type: string
+                    description: Identificador del workflow creado
+              examples:
+                created:
+                  summary: Identificador devuelto tras la creación
+                  value:
+                    _id: 6a391ded6f3160cd18547721
+  /api/workflows/{ID}/launch:
+    post:
+      tags:
+        - Workflows
+      operationId: launchWorkflow
+      summary: Lanza la ejecución de un workflow
+      description: >-
+        Lanza el workflow identificado por {ID} y devuelve la confirmación.
+        La respuesta refleja dinámicamente el identificador recibido en la URL.
+      # Permite que CUALQUIER identificador devuelva la respuesta, reflejando
+      # el {ID} real en el cuerpo mediante el motor de plantillas de Microcks.
+      x-microcks-operation:
+        dispatcher: FALLBACK
+        dispatcherRules: >-
+          {
+            "dispatcher": "URI_PARTS",
+            "dispatcherRules": "ID",
+            "fallback": "launched"
+          }
+      parameters:
+        - name: ID
+          in: path
+          required: true
+          description: Identificador del workflow a lanzar
+          schema:
+            type: string
+          examples:
+            launched:
+              value: 6a391ded6f3160cd18547721
+      responses:
+        '200':
+          description: Workflow lanzado correctamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                    description: Código de estado de la operación
+                  message:
+                    type: string
+                    description: Mensaje de confirmación del lanzamiento
+              examples:
+                launched:
+                  summary: Confirmación del lanzamiento del workflow
+                  value:
+                    status: 200
+                    message: 'Workflow "{{ request.params.ID }}" was launched'
+

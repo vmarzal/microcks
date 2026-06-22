@@ -6,7 +6,9 @@ metadata:
     microcks.io/instance: microcks
 spec:
   artifacts:
-    - url: https://raw.githubusercontent.com/vmarzal/microcks/refs/heads/main/samples/hci_openapi_complete.yaml
+    - url: https://raw.githubusercontent.com/vmarzal/microcks/main/samples/hci.openapi.yaml
       mainArtifact: true
-    - url: https://raw.githubusercontent.com/vmarzal/microcks/refs/heads/main/samples/leire.soapui.xml
+    - url: https://raw.githubusercontent.com/vmarzal/microcks/main/samples/leire.soapui.xml
+      mainArtifact: true
+    - url: https://raw.githubusercontent.com/vmarzal/microcks/main/samples/nextflow.openapi.yaml
       mainArtifact: true
